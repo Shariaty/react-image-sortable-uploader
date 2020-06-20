@@ -1,9 +1,214 @@
-/* add css module styles here (optional) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.imageUploaderPhotoList{
+  margin-bottom: 15px;
+}
+.imageUploaderImagePreview{
+  float: left;
+  margin: 10px;
+  width: 175px;
+  height: 200px;
+  border: 1px solid lightgray;
+  opacity: 0.5;
+  box-shadow: 0 3px 5px lightgrey;
+}
+.imageUploaderImagePreview > .centerizedBox{
   text-align: center;
+  position: relative;
+  margin: 0 auto;
+  top: 35%;
+  width: 50px;
+  height: 50px;
+}
+.imageUploaderImagePreview img{
+  width: 173px;
+  height: 165px;
+  padding: 1px;
+  cursor: move;
+  margin-top: -50px;
+}
+.imageButtonActionsPlace{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dotted lightgray;
+  margin-top: -3px;
+}
+.imageUploaderPhotoList .mainPhotoLabel{
+  position: relative;
+  width: 85px;
+  top: -208px;
+  background-color: #ff8100;
+  left: 23%;
+  color: white;
+  padding: 0px 5px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.photoGalleryTipsBox{
+  background-color: #fdf4d8;
+  padding: 15px 20px;
+  font-size: 13px;
+}
+.photoGalleryTipsBox i{
+  font-size: 18px;
+}
+.photoUploaderBox{
+  border: 2px dotted lightgrey;
+  width: 100%;
+  min-height: 300px;
+  text-align: center;
+}
+.photoUploaderBox h5{
+  position: absolute;
+  top: 18px;
+}
+.smallPhotoUploaderBox{
+  padding: 6px;
+  border: 2px dotted lightgrey;
+  width: 100%;
+  text-align: right;
+}
+
+.whiteBoxInVerticalList{
+  margin-bottom: 15px;
+  box-shadow: 0 1px 1px #bdbdbd;
+  background-color: #FFFFFF ;
+}
+.marginMobile30{
+  margin-top: 15px;
+}
+.marginTop10{
+  margin-top: 10px;
+}
+.marginTop15{
+  margin-top: 15px;
+}
+.marginTop20{
+  margin-top: 20px;
+}
+.marginTop25{
+  margin-top: 25px;
+}
+.marginTop30{
+  margin-top: 30px !important;
+}
+.marginTop40{
+  margin-top: 40px !important;
+}
+.marginBottom20{
+  margin-bottom: 20px !important;
+}
+.marginBottom30{
+  margin-bottom: 30px !important;
+}
+
+.paddingTop10{
+  padding-top: 10px;
+}
+.paddingTop20{
+  padding-top: 20px;
+}
+.paddingTop30{
+  padding-top: 30px !important;
+}
+.paddingTop40{
+  padding-top: 40px !important;
+}
+.paddingBottom20 {
+  padding-bottom: 20px !important;
+}
+
+
+.btn{
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.uploaderBtnPrimaryBig{
+  height: auto;
+  color: white;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #007bff;
+  border-radius: unset;
+  border: none;
+  outline:none;
+}
+.uploaderBtnPrimaryBig:hover{
+  background-color: #0062cc;
+}
+
+
+.uploaderBtnPrimaryBigRED{
+  height: auto;
+  color: white;
+  padding: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #ff0046;
+  border-radius: unset;
+  border: none;
+  outline:none;
+}
+.uploaderBtnPrimaryBigRED:hover{
+  background-color: #c50036;
+}
+
+.uploaderBtnLink{
+  background: none;
+  color: #4788ff;
+  font-weight: bold;
+  padding: 7px;
+  border: none;
+  outline:none;
+}
+
+.uploaderBtnLinkRED{
+  background: none;
+  color: #ff0046;
+  font-weight: bold;
+  padding: 7px;
+  border: none;
+  outline:none;
+}
+
+.iconClass{
+  position: relative;
+  top: 2px;
+}
+.iconSuccess{
+  font-size: 40px;
+  color: #00d44b;
+}
+.iconError{
+  font-size: 40px;
+  color: #d40002;
 }
