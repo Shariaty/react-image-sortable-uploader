@@ -39,16 +39,16 @@ class Example extends Component {
 ## Props
 | Prop       | Type       |  Accepted values  | Description   |
 | :--------- |:----------:|:------------:|:--------------:|
-| header     | Sting      | Any string |  string to display as the header of the component |
-| title      | Sting      | Any string |  string to display as the header of the component |
-| subTitle   | Sting      | Any string |  string to display as the header of the component |
-| urlUpload  | String URL |  'https://test.com/gallery/upload' |  Url endpoint to upload image in server |
-| urlDelete  | String URL |  'https://test.com/gallery/remove' |  Url endpoint to delete image in server |
-| identifier | Sting/Int  |  555 |  Identifier to send with the upload request in order to upload multiple images for an specific entity (such as product_id) |
+| header     | String      | Any string |  string to display as the header of the component |
+| title      | String      | Any string |  string to display as the header of the component |
+| subTitle   | String      | Any string |  string to display as the header of the component |
+| urlUpload  | String URL |  example: 'https://test.com/gallery/upload' |  Url endpoint to upload image in server |
+| urlDelete  | String URL |  example: 'https://test.com/gallery/remove' |  Url endpoint to delete image in server |
+| identifier | String/Int  |  555 |  Identifier to send with the upload request in order to upload multiple images for an specific entity (such as product_id) |
 | editMode   | Boolean    |  true/false |  enable edit button on each picture |
 | onEdit     | Function   |  (editData) => console.log(editData) | function to lunch on edit button clicked (can be customized as you like) |
 | onSort     | Function   |  (sortedData) => console.log(sortedData) | function to lunch on sort finished ( array of images with their new index in order to update it on the server or manipulate as you prefer) |
-| theme      | Sting      |  'blue/red' | function to lunch on sort finished ( array of images with their new index in order to update it on the server or manipulate as you prefer) |
+| theme      | String      |  'blue/red' | change the the color theme of the uploader in order to suits your design |
 
 
 ## License
