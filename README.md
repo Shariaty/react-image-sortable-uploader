@@ -2,7 +2,6 @@
 
 > A package to upload and manage the order of pictures
 
->[!WARNING]
 > :warning: ** This package is still under development and it is not suitable for use, It will be completed by the next 14 days. Please try not to use it until this message been removed
 
 [![NPM](https://img.shields.io/npm/v/react-image-sortable-uploader.svg)](https://www.npmjs.com/package/react-image-sortable-uploader) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
