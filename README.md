@@ -10,6 +10,10 @@
 npm install --save react-image-sortable-uploader
 ```
 
+## Demo
+![Farmers Market Finder Demo](demo/demo.gif)
+
+
 ## Usage
 
 ```jsx
@@ -65,7 +69,7 @@ class App extends Component {
 
     if (sortedData && sortedData.length){
       let newData = [];
-      // Map the sorted data to match with your Api endpoint
+      // Map the sorted data to match with your API endpoint
       sortedData.map( (item , index) => {
           newData.push({
             ImageId: item.id,
@@ -73,7 +77,7 @@ class App extends Component {
           });
       })
 
-      // create form data or in your case generate a raw json acceotable for your API endpoint
+      // create form data or in your case generate a raw json acceptable by your API endpoint
       let formData = new FormData();
       formData.append('propId',PROP_ID);
       formData.append('Images', JSON.stringify(newData));
