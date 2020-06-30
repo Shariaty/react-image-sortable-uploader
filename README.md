@@ -11,7 +11,7 @@ npm install --save react-image-sortable-uploader
 ```
 
 ## Demo
-![Farmers Market Finder Demo](demo/demo.gif)
+![Farmers Market Finder Demo](https://raw.githubusercontent.com/Shariaty/react-image-sortable-uploader/master/demo/demo.gif)
 
 
 ## Usage
