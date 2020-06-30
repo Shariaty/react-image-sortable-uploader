@@ -1,6 +1,6 @@
 {
   "name": "react-image-sortable-uploader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A package to upload and manage the order of pictures",
   "author": "Shariaty",
   "license": "MIT",
@@ -53,5 +53,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }

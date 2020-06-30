@@ -17,14 +17,19 @@ code {
   margin-bottom: 15px;
 }
 .imageUploaderImagePreview{
+  position: relative;
   float: left;
   margin: 10px;
   width: 175px;
   height: 200px;
   border: 1px solid lightgray;
-  opacity: 0.5;
   box-shadow: 0 3px 5px lightgrey;
 }
+
+.imageInLoad{
+  opacity: 0.5;
+}
+
 .imageUploaderImagePreview > .centerizedBox{
   text-align: center;
   position: relative;
@@ -33,6 +38,23 @@ code {
   width: 50px;
   height: 50px;
 }
+
+
+.imageUploaderImagePreview > .imageBoxError{
+  background-color: red;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  padding: 4px 0;
+  height: auto;
+  position: absolute;
+  top: 0;
+  opacity: 0.9;
+}
+
+
+
 .imageUploaderImagePreview img{
   width: 173px;
   height: 165px;
@@ -53,11 +75,12 @@ code {
   background-color: #ff8100;
   left: 23%;
   color: white;
-  padding: 0px 5px;
+  padding: 0 5px;
   font-size: 12px;
   text-align: center;
   font-weight: bold;
   border-radius: 3px;
+  z-index: 2;
 }
 .photoGalleryTipsBox{
   background-color: #fdf4d8;
@@ -211,4 +234,14 @@ code {
 .iconError{
   font-size: 40px;
   color: #d40002;
+}
+
+.displayInlineFlex{
+  display: inline-flex;
+  align-items: center;
+}
+
+.smallMutedText{
+  color: #c2c2c2;
+  font-size: 13px;
 }
