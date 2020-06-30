@@ -119,6 +119,7 @@ class App extends Component {
 
 export default App;
 ```
+
 ## Props
 | Prop       | Type       |  Accepted values  | Description   |
 | :--------- |:----------:|:------------:|:--------------:|
@@ -136,6 +137,52 @@ export default App;
 | loading     | Boolean      |  true/false | State of gallery loading, It is used to show gallery are doing something like sorting etc. |
 
 
+## Accepted images format
+```jsx
+let images = [
+  { id: '5555' , url: 'http://www.example.com/images/5555.jpg' },
+  { id: '6666' , url: 'http://www.example.com/images/6666.jpg' },
+]
+```
+
+## Upload image
+```jsx
+Sends a post Request to given "urlUpload" with "identifier" and image file as a formData , excpect to recieve Html status code 200 on success and othe such as 401 on failed.
+There is also a prefabricated format for recieving messeges from the response from the API.
+
+Request (formData) = {
+    "image": (binary)
+    "propId": '555' // The identifier prop
+}
+
+FailedResponse = {
+   "ReportModel": {
+       "Messages": [
+           "Please try again",
+           "images format is not supported."
+       ]
+   },
+   "PhotoId": null
+}
+
+SuccessResponse = {
+   "ReportModel": {
+       "Messages": []
+   },
+   "PhotoId": '5555' // ID of the uploaded image, essential for deleting the image
+}
+
+```
+
+## Delete image
+```jsx
+Sends a post Request to given "urlDelete" with "identifier" if available, excpect to recieve Html status code 200 on success and othe such as 401 on failed.
+
+Request (formData) = {
+    "ImageId": '666' // The id of the image
+    "propId": '555' // The identifier prop
+}
+```
 ## License
 
 MIT © [Shariaty](https://github.com/Shariaty)

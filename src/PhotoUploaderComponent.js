@@ -42,18 +42,10 @@ class PhotoUploaderComponent extends Component {
 
                 this._handleUpload(file).then((response) => {
                   const NewFiles = this.state.files;
+                  let newID = null;
 
                   if (response.status === 200){
-                    // TODO: need to receive photo ID from database -> me.Hoseinzadeh
-                    let imageUrl = response.data?.PhotoUrl;
-
-                    if (imageUrl){
-                      let splitted = imageUrl.split('/');
-                      if (splitted && splitted.length && splitted.hasOwnProperty(splitted.length - 1)) {
-                        newID = splitted[splitted.length - 1];
-                      }
-                    }
-                    // end
+                    newID = response.data?.PhotoId;
                     status = 2;
                   } else {
                     status = 3;
