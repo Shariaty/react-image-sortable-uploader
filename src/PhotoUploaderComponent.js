@@ -98,12 +98,13 @@ class PhotoUploaderComponent extends Component {
       if ( urlUpload && file) {
         const formData = new FormData();
         formData.append('image',file)
-        if (Identifier) {
-          formData.append('propId',Identifier)
-        }
 
         if (AdditionalIdentifierName && AdditionalIdentifierValue) {
           formData.append(`${AdditionalIdentifierName}`,AdditionalIdentifierValue)
+        } else {
+          if (Identifier) {
+            formData.append('propId',Identifier)
+          }
         }
 
         const config = {
@@ -116,7 +117,9 @@ class PhotoUploaderComponent extends Component {
     }
 
     _selectImage(){
-        document.getElementById("selectImage").click()
+      let { Identifier , AdditionalIdentifierValue } = this.props;
+      let elementName = AdditionalIdentifierValue ? `selectImage-${AdditionalIdentifierValue}` : `selectImage-${Identifier}`;
+      document.getElementById(elementName).click()
     }
 
     _handleRemove(id){
@@ -181,8 +184,9 @@ class PhotoUploaderComponent extends Component {
     }
 
     render() {
-        let { Identifier , header , title , subTitle , theme , editMode , onEdit , loading , images} = this.props;
+        let { Identifier , AdditionalIdentifierValue , header , title , subTitle , theme , editMode , onEdit , loading , images} = this.props;
         let {files} = this.state;
+        let elementName = AdditionalIdentifierValue ? `selectImage-${AdditionalIdentifierValue}` : `selectImage-${Identifier}`;
 
         const renderStatus = (status) => {
             switch(status) {
@@ -214,7 +218,7 @@ class PhotoUploaderComponent extends Component {
                   <input className="fileInput"
                          ref={ref => this.fileInput = ref}
                          style={{ display: 'none' }}
-                         id="selectImage"
+                         id={`${elementName}`}
                          type="file"
                          onChange={(e) => this._handleImageChange(e)}/>
 
