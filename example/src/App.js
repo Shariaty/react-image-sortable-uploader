@@ -4,6 +4,7 @@ import 'react-image-sortable-uploader/dist/index.css'
 import axios from "axios";
 
 const PROP_ID = '4c705a9e-dd1a-463d-868f-6f3fcab32f6b'
+const ADDITIONAL_ID = '5555'
 const TOKEN = '13f0bc75-49a0-46e8-b6ed-2bac6b0d41e6'
 const STATIC_URL = 'http://example.com'
 
@@ -60,7 +61,8 @@ class App extends Component {
 
       // create form data or in your case generate a raw json acceotable for your API endpoint
       let formData = new FormData();
-      formData.append('propId',PROP_ID);
+
+      formData.append('propId', ADDITIONAL_ID ? ADDITIONAL_ID : PROP_ID);
       formData.append('Images', JSON.stringify(newData));
 
       this.setState({inProgress : true});
@@ -83,6 +85,8 @@ class App extends Component {
         <div style={{padding: 50}}>
           <SortableUploader
             Identifier={PROP_ID}
+            AdditionalIdentifierName='test'
+            AdditionalIdentifierValue={ADDITIONAL_ID}
             header='Photo Gallery'
             title='Upload at least 1 photo'
             subTitle="You`ll also be able to upload more after registration"

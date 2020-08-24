@@ -93,7 +93,7 @@ class PhotoUploaderComponent extends Component {
     }
 
     _handleUpload(file){
-      let { Identifier , urlUpload } = this.props;
+      let { Identifier , urlUpload , AdditionalIdentifierName , AdditionalIdentifierValue } = this.props;
 
       if ( urlUpload && file) {
         const formData = new FormData();
@@ -101,6 +101,11 @@ class PhotoUploaderComponent extends Component {
         if (Identifier) {
           formData.append('propId',Identifier)
         }
+
+        if (AdditionalIdentifierName && AdditionalIdentifierValue) {
+          formData.append(`${AdditionalIdentifierName}`,AdditionalIdentifierValue)
+        }
+
         const config = {
           headers: {
             'content-type': 'multipart/form-data'
@@ -316,6 +321,8 @@ export default PhotoUploaderComponent;
 
 PhotoUploaderComponent.defaultProps = {
     Identifier: null,
+    AdditionalIdentifierName: 'AdditionalIdentifier',
+    AdditionalIdentifierValue: null,
     header: 'Photo Gallery',
     title: 'Upload at least 1 photo',
     subTitle: 'You`ll also be able to upload more after registration',
